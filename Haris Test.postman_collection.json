@@ -1,0 +1,365 @@
+{
+	"info": {
+		"name": "Haris Test",
+		"_postman_id": "522a87ec-2808-4ff9-b157-636922aeb1a9",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "mcclure.trey@example.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"login"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "live",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "live@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"register"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Post",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MDAzMCwiZXhwIjoxNTcyMzQzNjMwLCJuYmYiOjE1NzIzNDAwMzAsImp0aSI6Ikh2RTZQTkpzWW1vcEM1SjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.W7gmrBzpYXI82DCH0uBDe4xGZ963pdP9UmDgKUdnQE0"
+					},
+					{
+						"key": "X-Requested-With",
+						"value": "XMLHttpRequest"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "Live testing",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Live testing Live testing",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/create-post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"create-post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Edit Post",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MDAzMCwiZXhwIjoxNTcyMzQzNjMwLCJuYmYiOjE1NzIzNDAwMzAsImp0aSI6Ikh2RTZQTkpzWW1vcEM1SjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.W7gmrBzpYXI82DCH0uBDe4xGZ963pdP9UmDgKUdnQE0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "this is edit post",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "this is edit post heading",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "54",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/edit-post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"edit-post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Post",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MDAzMCwiZXhwIjoxNTcyMzQzNjMwLCJuYmYiOjE1NzIzNDAwMzAsImp0aSI6Ikh2RTZQTkpzWW1vcEM1SjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.W7gmrBzpYXI82DCH0uBDe4xGZ963pdP9UmDgKUdnQE0"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "54",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/delete-post",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"delete-post"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Like",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MDAzMCwiZXhwIjoxNTcyMzQzNjMwLCJuYmYiOjE1NzIzNDAwMzAsImp0aSI6Ikh2RTZQTkpzWW1vcEM1SjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.W7gmrBzpYXI82DCH0uBDe4xGZ963pdP9UmDgKUdnQE0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "53",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/post-like",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"post-like"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post Comment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MDAzMCwiZXhwIjoxNTcyMzQzNjMwLCJuYmYiOjE1NzIzNDAwMzAsImp0aSI6Ikh2RTZQTkpzWW1vcEM1SjkiLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.W7gmrBzpYXI82DCH0uBDe4xGZ963pdP9UmDgKUdnQE0"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "post_id",
+							"value": "53",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "comment",
+							"value": "Live comment",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/post-comment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"post-comment"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Post List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2hhcmlzX3Rlc3RcL3B1YmxpY1wvYXBpXC9sb2dpbiIsImlhdCI6MTU3MjM0MTIyNywiZXhwIjoxNTcyMzQ0ODI3LCJuYmYiOjE1NzIzNDEyMjcsImp0aSI6IkZoTTdIaVdnS2VXSmVmM1giLCJzdWIiOjEsInBydiI6Ijg3ZTBhZjFlZjlmZDE1ODEyZmRlYzk3MTUzYTE0ZTBiMDQ3NTQ2YWEifQ.joCwbxYRBdhn3xXAUYiVE2JtpaasF38-ivaP4lIy2T8"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost/haris_test/public/api/post-list",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"haris_test",
+						"public",
+						"api",
+						"post-list"
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
